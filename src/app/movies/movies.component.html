@@ -1,0 +1,18 @@
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <a class="navbar-brand">Getting Started with Angular</a>
+</nav>
+
+<div class="container">
+    <div class="search">
+        <div class="row">
+            <div class="col-10">
+                <input type="input" class="form-control" [(ngModel)]="Search">
+            </div>
+            <div class="col-2">
+                <input type="checkbox" [(ngModel)]="Checked">
+            </div>
+        </div>
+    </div>
+    <movies-list-component *ngIf="Checked" [movies]="movies" (movieClickEvt)="movieClicked($event)" [search]="Search"></movies-list-component>
+    <movies-grid-component *ngIf="!Checked" [movies]="movies" (movieClickEvt)="movieClicked($event)" [search]="Search"></movies-grid-component>
+</div>

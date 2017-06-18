@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-md-3" *ngFor="let movie of movies | searchMovie: search">
+        <div class="card">
+            <img class="card-img-top" [src]="movie.poster">
+            <div class="card-block">
+                <h4 class="card-title">{{movie.title}}</h4>
+                <p class="card-text">{{movie.title}} was presented in {{movie.year}}.</p>
+            </div>
+        </div>
+    </div>
+</div>
