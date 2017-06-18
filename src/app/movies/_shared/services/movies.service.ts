@@ -1,7 +1,7 @@
 // tslint:disable:max-line-length
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs/Observable';
 import 'rxjs/Rx';
 
 import { Movie } from '../index';
