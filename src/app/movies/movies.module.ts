@@ -8,14 +8,16 @@ import { MoviesComponent } from './movies.component';
 import { MoviesListComponent } from './movies-list/movies-list.component';
 import { MoviesGridComponent } from './movies-grid/movies-grid.component';
 
+import { MovieRoutes } from './movies.routing';
 import { MoviesService, SearchPipe } from './_shared/index';
 
 @NgModule({
     imports: [
         CommonModule,
-        HttpModule,
         RouterModule,
-        FormsModule
+        FormsModule,
+        HttpModule,
+        MovieRoutes
     ],
     declarations: [
         MoviesComponent,

@@ -1,21 +1,12 @@
 // tslint:disable:max-line-length
 import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/Rx';
 
 import { Movie } from '../index';
 
 @Injectable()
 export class MoviesService {
 
-    constructor(private _http: Http) { }
-
-    getAllApi(): Observable<Movie[]> {
-        return this._http.get('http://api.openweathermap.org/data/2.5/weather?q=London&APPID=9d785b8816a10ea064d9ce5b8d3e9910')
-            .map((result) => result.json())
-            .catch((err) => err);
-    }
+    constructor() { }
 
     getAll(): Movie[] {
         return [

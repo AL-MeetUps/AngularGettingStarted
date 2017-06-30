@@ -17,7 +17,6 @@ export class MoviesComponent implements OnInit {
 
   ngOnInit(): void {
     this.movies = this._moviesService.getAll(); // Mock Data
-    this._moviesService.getAllApi().subscribe((weather) => console.log(weather)); // Call to API Data
   }
 
   movieClicked(movie: Movie) {
